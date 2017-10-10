@@ -10,8 +10,7 @@ public class RigidBodyMove : MonoBehaviour {
 	void Start () {
 		myRigidBody = GetComponent<Rigidbody> ();
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 
 		float inputHorizontal = Input.GetAxis ("Horizontal");
