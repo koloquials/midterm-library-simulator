@@ -7,7 +7,8 @@ public class DropOffManager : MonoBehaviour {
 	
 	public GameObject player;
 	public GameObject requiredItem;
-	public GameObject worldItem;
+	public GameObject thisWorldItem; //for visuals that must be turned on
+	public GameObject newWorldItem; //for interactables that must be turned on
 	public Text textBox;
 	public bool isQuestObj = false;
 	float range;
@@ -16,13 +17,13 @@ public class DropOffManager : MonoBehaviour {
 		range = Vector3.Distance(transform.position, player.transform.position);
 		if (range > 8f) {
 			if (PlayerInfoManager.hasItem == true) {
-				textBox.text = "not close enough"; 
+				//textBox.text = "not close enough!!"; 
 			} 
 		} else {
-			textBox.text = "place thing here! as long as it's the right thing!!!"; 
-			if (Input.GetKeyDown(KeyCode.Space) && PlayerInfoManager.hasItem == true){
+			//textBox.text = "place thing here! as long as it's the right thing!!!"; 
+			if (Input.GetMouseButton (0) && PlayerInfoManager.hasItem == true){
 				if (PlayerInfoManager.heldItem != requiredItem) {
-					textBox.text = "WRONG THING!";
+					//textBox.text = "WRONG THING!";
 				} else {
 					if (isQuestObj == true) {
 						PlayerInfoManager.booksCollected++;
@@ -30,7 +31,8 @@ public class DropOffManager : MonoBehaviour {
 					PlayerInfoManager.heldItem.SetActive (false);
 					PlayerInfoManager.hasItem = false;
 					PlayerInfoManager.heldItem = null;
-					worldItem.gameObject.SetActive (true);
+					newWorldItem.gameObject.SetActive (true);
+					thisWorldItem.gameObject.SetActive (true);
 					gameObject.SetActive (false);
 				}
 			}

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 12b259815edf649f2be1688e86ece87d
+timeCreated: 1508788191
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 60
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Foglihten
+  fontNames:
+  - Foglihten
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
